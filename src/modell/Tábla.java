@@ -29,6 +29,23 @@ public class Tábla {
             }
         }
     }
+    public boolean UresOszlop(int oszlop) {
+        for (int i = 0; i < T.length; i++) {
+            if (T[i][oszlop] == 'K') {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean UresSor(int sor) {
+        for (char c : T[sor]) {
+            if (c == 'K') {
+                return false;
+            }
+        }
+        return true; 
+    }
     public String Megjelenit() {
         String szöveg = "";
         for (int i = 0; i < T.length; i++) {
