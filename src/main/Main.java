@@ -17,6 +17,10 @@ public class Main {
         
         System.out.println("A(z)"+oszlop +". oszlop üres-e: "+ tabla.UresOszlop(oszlop));
         System.out.println("A(z)"+sor +". sor üres-e: " + tabla.UresSor(sor));
+        
+        System.out.println("9. feladat: Üres oszlopok és sorok száma:");
+        System.out.println("Oszlopok: " + tabla.UresOszlopokSzama());
+        System.out.println("Sorok: " + tabla.UresSorokSzama());
     }
     
 }

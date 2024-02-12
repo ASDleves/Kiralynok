@@ -46,6 +46,41 @@ public class Tábla {
         }
         return true; 
     }
+    public int UresOszlopokSzama() {
+        int uresOszlop = 0;
+
+        for (int j = 0; j < T[0].length; j++) {
+            boolean isEmpty = true;
+            for (int i = 0; isEmpty && i < T.length; i++) {
+                if (T[i][j] == 'K') {
+                    isEmpty = false;
+                }
+            }
+            if (isEmpty) {
+                uresOszlop++;
+            }
+        }
+
+        return uresOszlop;
+    }
+
+    public int UresSorokSzama() {
+        int uresSor= 0;
+
+        for (int i = 0; i < T.length; i++) {
+            boolean isEmpty = true;
+            for (int j = 0; isEmpty && j < T[i].length; j++) {
+                if (T[i][j] == 'K') {
+                    isEmpty = false;
+                }
+            }
+            if (isEmpty) {
+                uresSor++;
+            }
+        }
+
+        return uresSor;
+    }
     public String Megjelenit() {
         String szöveg = "";
         for (int i = 0; i < T.length; i++) {
