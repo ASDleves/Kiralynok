@@ -11,39 +11,24 @@ public class Main {
         Tábla tabla = new Tábla('#');
         System.out.println("4. feladat: Az üres tábla:");
         System.out.println(tabla.Megjelenit());
+
         tabla.Elhelyez(8);
         System.out.println("6. feladat: A feltöltött tábla:");
         System.out.println(tabla.Megjelenit());
+
         int oszlop = 3;
         int sor = 3;
 
-        System.out.println("A(z)" + oszlop + ". oszlop üres-e: " + tabla.UresOszlop(oszlop));
-        System.out.println("A(z)" + sor + ". sor üres-e: " + tabla.UresSor(sor));
+        System.out.println("A(z) " + oszlop + ". oszlop üres-e: " + tabla.UresOszlop(oszlop));
+        System.out.println("A(z) " + sor + ". sor üres-e: " + tabla.UresSor(sor));
 
         System.out.println("9. feladat: Üres oszlopok és sorok száma:");
         System.out.println("Oszlopok: " + tabla.UresOszlopokSzama());
         System.out.println("Sorok: " + tabla.UresSorokSzama());
-
-        String fajlnev = "tablake64.txt";
-        File file = new File(fajlnev);
-
-        if (file.exists()) {
-            file.delete();
-        }
-
-        FileWriter fajlbaIras= new FileWriter(file);
-
-        for (int n = 1; n < 65; n++) {
-            Tábla tablaFajl = new Tábla('*');
-            tablaFajl.Elhelyez(n);
-
-            fajlbaIras.write(tablaFajl.Megjelenit());
-            fajlbaIras.write("\n\n");
-        }
-
-        fajlbaIras.close();
+        tabla.Fajlbairas();
 
     }
-}
 
+    
+}
 
