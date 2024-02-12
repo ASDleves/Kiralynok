@@ -1,3 +1,4 @@
 Bella Richárd
 
-![Gui képe](/path/to/GuiKép.png)
+![Gui képe](GuiKép.png)
+
