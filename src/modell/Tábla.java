@@ -1,5 +1,7 @@
 package modell;
 
+import java.util.Random;
+
 public class Tábla {
     private char[][] T;
     private char UresCella;
@@ -10,6 +12,20 @@ public class Tábla {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 T[i][j] = UresCella;
+            }
+        }
+    }
+    public void Elhelyez(int N) {
+        Random rand = new Random();
+        int kiralynokszama = 0;
+
+        while (kiralynokszama < N) {
+            int i = rand.nextInt(T.length);
+            int j = rand.nextInt(T[i].length);
+
+            if (T[i][j] == UresCella) {
+                T[i][j] = 'K'; 
+                kiralynokszama++;
             }
         }
     }
